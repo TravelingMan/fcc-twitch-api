@@ -5,4 +5,5 @@
 3. If a Twitch user is currently streaming, I can see additional details about what
     they are streaming.
 URL: https://www.freecodecamp.org/challenges/use-the-twitchtv-json-api
+API: https://wind-bow.glitch.me/
 */
