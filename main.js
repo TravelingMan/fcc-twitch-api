@@ -16,3 +16,21 @@ This server caches data to lower the request rate. To prevent abuses this server
 GET requests only, and serves only routes /users/:user, /channels/:channel, and
 /streams/:stream. These are more than enough to complete the challenge. 
 */
+
+"use strict";
+
+function retrieveJSON(urlString) {
+    const request = new XMLHttpRequest();
+    request.open("GET", urlString, true);
+
+    request.onload = () => {
+        let jsonResult = request.response;
+        parseJSON(jsonResult);
+    };
+
+    request.onerror = () => {
+        console.log("There was an error retrieving the JSON from " + urlString);
+    };
+
+    request.send();
+}
